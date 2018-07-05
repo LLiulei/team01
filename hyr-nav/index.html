@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/betterScroll.js"></script>
+    <script>
+        document.documentElement.style.fontSize = innerWidth / 750 * 100 + 'px';
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="nav">
+            <ul>
+                <li class="active">推荐</li>
+                <li>女装</li>
+                <li>美食</li>
+                <li>居家</li>
+                <li>美妆个护</li>
+                <li>男装</li>
+                <li>内衣</li>
+                <li>鞋子</li>
+                <li>推荐</li>
+                <li>女装</li>
+                <li>美食</li>
+                <li>居家</li>
+                <li>美妆个护</li>
+                <li>男装</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var li = Array.from(document.querySelectorAll('li'));
+        var btscroll = new BScroll('.nav', {
+            click: true,
+            scrollX: true
+        })
+        li.map(function(v) {
+            v.onclick = function() {
+                document.querySelector('.active').classList.remove('active');
+                this.classList.add('active');
+            }
+
+        })
+    </script>
+</body>
+
+</html>
